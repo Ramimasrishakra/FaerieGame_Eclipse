@@ -6,6 +6,8 @@ import org.lwjgl.input.Mouse;
 
 public class Menu extends BasicGameState{
 	
+	Play play;
+	
 	Image playNow;
 	Image exitGame;
 	Image startBild;
@@ -18,6 +20,7 @@ public class Menu extends BasicGameState{
 		startBild = new Image("testdata/startBild.png");
 		//exitGame = new Image("testdata/Exit.png");
 		playNow = new Image("testdata/playNow.png");
+		this.play = new Play(1);
 		
 		
 		
@@ -27,6 +30,7 @@ public class Menu extends BasicGameState{
 		startBild.draw();
 		playNow.draw(50,50);
 		//exitGame.draw(100,200);
+		
 		
 		
 	}

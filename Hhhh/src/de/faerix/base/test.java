@@ -12,6 +12,7 @@ public class test extends StateBasedGame {
 	public static final String gamename = "Faerix";
 	public static final int menu = 0;
 	public static final int play = 1;
+	public static Music bgMusic;
 	
 
 	public test(String gamename) {

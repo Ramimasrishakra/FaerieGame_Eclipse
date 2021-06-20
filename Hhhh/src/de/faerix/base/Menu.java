@@ -11,6 +11,9 @@ public class Menu extends BasicGameState{
 	Image playNow;
 	Image exitGame;
 	Image startBild;
+	Music bgMusic;
+	Sound click;
+	
 	
 	
 	public Menu(int state) {
@@ -20,6 +23,9 @@ public class Menu extends BasicGameState{
 		startBild = new Image("testdata/startBild.png");
 		//exitGame = new Image("testdata/Exit.png");
 		playNow = new Image("testdata/playNow.png");
+		bgMusic = new Music("testdata/sound/Waiting Song.wav");
+		bgMusic.loop();
+		click = new Sound("testdata/sound/click.wav");
 		this.play = new Play(1);
 		
 		
@@ -40,6 +46,7 @@ public class Menu extends BasicGameState{
 		int posY = Mouse.getY();
 		if ((posX > 500 && posX < 1100)&& (posY > 450 && posY < 1000) ) {
 			if(Mouse.isButtonDown(0)) {
+				click.play();
 				sbg.enterState(1);
 				
 				
